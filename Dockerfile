@@ -10,11 +10,11 @@ COPY package*.json ./
 
 # Install dependencies
 RUN npm install
-RUN npm run build
-
 
 # Copy app source
 COPY . .
+
+RUN npm run build
 
 # Bind the port that the image will run on
 EXPOSE 8080
