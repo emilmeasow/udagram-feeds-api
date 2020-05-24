@@ -10,6 +10,8 @@ COPY package*.json ./
 
 # Install dependencies
 RUN npm install
+RUN npm run build
+
 
 # Copy app source
 COPY . .
@@ -18,4 +20,4 @@ COPY . .
 EXPOSE 8080
 
 # Define the Docker image's behavior at runtime
-CMD ["node", "src/server.js"]
+CMD ["node", "server.js"]
