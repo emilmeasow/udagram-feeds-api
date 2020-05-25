@@ -5,7 +5,7 @@ metadata:
     service: udagram-feeds-api
   name: udagram-feeds-api-deployment
 spec:
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
