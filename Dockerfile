@@ -19,10 +19,10 @@ RUN npm run build
 # Bind the port that the image will run on
 EXPOSE 8080
 
-ENV POSTGRES_USERNAME $POSTGRES_USERNAME
-ENV POSTGRES_PASSWORD $POSTGRES_PASSWORD
-ENV POSTGRES_HOST $POSTGRES_HOST
-ENV POSTGRES_DB $POSTGRES_DB
+ENV POSTGRES_USERNAME udagrameeasowdev
+ENV POSTGRES_PASSWORD udagrameeasowdev
+ENV POSTGRES_HOST udagrameeasowdev.cbjzfxjkpd2h.us-east-2.rds.amazonaws.com
+ENV POSTGRES_DB udagrameeasowdev
 
 # Define the Docker image's behavior at runtime
 CMD ["node", "www/server.js"]
