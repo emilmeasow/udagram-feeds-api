@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - echo "docker build -t udagram-feeds-api --build-arg POSTGRES_USERNAME=${POSTGRES_USERNAME} --build-arg POSTGRES_PASSWORD=${POSTGRES_PASSWORD} --build-arg POSTGRES_HOST=${POSTGRES_HOST} --build-arg POSTGRES_DB=${POSTGRES_DB} --build-arg AWS_REGION=${AWS_REGION} .""
+  - echo "${POSTGRES_USERNAME} ${POSTGRES_PASSWORD} ${POSTGRES_HOST} ${POSTGRES_DB} ${AWS_REGION} "
   - docker build -t udagram-feeds-api --build-arg POSTGRES_USERNAME=${POSTGRES_USERNAME} --build-arg POSTGRES_PASSWORD=${POSTGRES_PASSWORD} --build-arg POSTGRES_HOST=${POSTGRES_HOST} --build-arg POSTGRES_DB=${POSTGRES_DB} --build-arg AWS_REGION=${AWS_REGION} .
   - docker tag udagram-feeds-api emileasow/udagram-feeds-api:latest
 
